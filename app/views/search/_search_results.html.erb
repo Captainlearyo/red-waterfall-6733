@@ -1,0 +1,17 @@
+<h1>Total members in Affiliation: <%= @facade.total_members_count %></h1>
+
+<ul>
+  <% @facade.characters.each do |character| %>
+    <li class="character">
+      <strong>Name:</strong> <%= character.name %><br>
+      <% if character.photo_url.present? %>
+        <strong>Character Image: </strong><%= image_tag character.photo_url %><br>
+      <% end %>
+      <strong>Allies:</strong> <%= character.allies.join(', ') %><br>
+      <strong>Enemies:</strong> <%= character.enemies.join(', ') %><br>
+      <strong>Affiliations:</strong> <%= character.affiliations %><br>
+    </li>
+  <% end %>
+</ul>
+
+
