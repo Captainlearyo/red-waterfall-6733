@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @facade = SearchFacade.new(params[:affiliation])
+    @facade = SearchFacade.new(params['nation'])
   end
 end
 

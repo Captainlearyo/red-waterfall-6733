@@ -13,7 +13,7 @@ RSpec.describe Character do
 
     expect(character).to be_a Character
     expect(character.name).to eq("MoMo")
-    expect(character.affiliations[0]).to eq("pet")
+    expect(character.affiliations).to eq("pet")
     expect(character.id).to eq("1")
     expect(character.allies).to eq(["None"])
     expect(character.enemies).to eq(["None"])
